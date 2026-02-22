@@ -24,7 +24,7 @@ public class UnoGameParameters extends TunableParameters {
     public int nCardsPerPlayer = 7;
     public int nNumberCards = 10;
     public int nWildCards = 4;
-    public int nSkipCards = 2;
+    public int nSkipCards = 6;
     public int nReverseCards = 2;
     public int nDrawCards = 2;
     public int[] specialDrawCards = new int[]{2};  // DrawTwo card
@@ -48,7 +48,7 @@ public class UnoGameParameters extends TunableParameters {
         addTunableParameter("nCardsPerPlayer", 7, Arrays.asList(5,7,10,15));
         addTunableParameter("nNumberCards", 10, Arrays.asList(5,10,15));
         addTunableParameter("nWildCards", 4, Arrays.asList(1,2,4,6,8,10));
-        addTunableParameter("nSkipCards", 2, Arrays.asList(1,2,4,6,8,10));
+        addTunableParameter("nSkipCards", 6, Arrays.asList(1,2,4,6,8,10));
         addTunableParameter("nReverseCards", 2, Arrays.asList(1,2,4,6,8,10));
         addTunableParameter("nDrawCards", 2, Arrays.asList(1,2,4,6,8,10));
         addTunableParameter("nReversePoints", 20, Arrays.asList(5,10,20,30,50));

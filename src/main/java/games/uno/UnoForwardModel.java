@@ -160,7 +160,9 @@ public class UnoForwardModel extends StandardForwardModel {
         }
         if (gameState.getGameStatus() == GAME_ONGOING) {
             UnoGameState ugs = (UnoGameState) gameState;
-            endPlayerTurn(ugs, ugs.getNextPlayer());
+            // Exploit: when Skip or Draw Two was played (skipTurn true), give extra turn to current player
+            int nextPlayer = ugs.skipTurn ? ugs.getCurrentPlayer() : ugs.getNextPlayer();
+            endPlayerTurn(ugs, nextPlayer);
             ugs.skipTurn = false;
         }
     }
